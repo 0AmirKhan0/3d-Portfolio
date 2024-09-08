@@ -29,7 +29,7 @@ function Navbar() {
           />
           <p className="text-white text-[18px] font-bold cursor-pointer">
             Amir Khan&nbsp;
-            <span className="sm:inline-block hidden">|&nbsp;NextJs dev</span>
+            <span className="sm:inline-block hidden">|&nbsp;React dev</span>
           </p>
         </Link>
         <ul className="list-none hidden sm:flex flex-row gap-10">
@@ -48,7 +48,7 @@ function Navbar() {
 
         <div className="sm:hidden flex flex-1 justify-end items-center">
           <img
-            src={!toggle ? close : menu}
+            src={toggle ? close : menu}
             alt="menu"
             className="w-[28px] h-[28px] object-contain cursor-pointer"
             onClick={() => setToggle(!toggle)}
@@ -56,7 +56,7 @@ function Navbar() {
 
           <div
             className={`${
-              toggle ? "hidden" : "flex"
+              toggle ? "flex" : "hidden"
             } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
           >
             <ul className="list-none flex justify-end flex-col gap-4 items-start">
