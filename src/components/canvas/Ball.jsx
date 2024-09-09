@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import {
   Decal,
@@ -8,50 +8,57 @@ import {
   useTexture,
 } from "@react-three/drei";
 
-import CanvasLoader from "../Loader";
+import Loader from "../Loader";
+import { MOUSE } from "three";
 
-const Ball = (props) => {
-  const [decal] = useTexture([props.imgUrl]);
-
+function Ball({ imgUrl }) {
+  const [decal] = useTexture([imgUrl]);
   return (
     <Float speed={1.75} rotationIntensity={1} floatIntensity={2}>
       <ambientLight intensity={0.25} />
-      <directionalLight position={[0, 0, 0.05]} />
+      <directionalLight position={[0, 0, 0.5]} />
+
       <mesh castShadow receiveShadow scale={2.75}>
         <icosahedronGeometry args={[1, 1]} />
         <meshStandardMaterial
-          color='#fff8eb'
+          color="#fff"
           polygonOffset
           polygonOffsetFactor={-5}
           flatShading
         />
         <Decal
+          map={decal}
           position={[0, 0, 1]}
           rotation={[2 * Math.PI, 0, 6.25]}
-          scale={1}
-          map={decal}
           flatShading
         />
       </mesh>
     </Float>
   );
-};
+}
 
-const BallCanvas = ({ icon }) => {
+function BallCanvas({ icon }) {
   return (
     <Canvas
-      frameloop='demand'
+      frameloop="demand"
       dpr={[1, 2]}
       gl={{ preserveDrawingBuffer: true }}
     >
-      <Suspense fallback={<CanvasLoader />}>
-        <OrbitControls enableZoom={false} />
+      <Suspense fallback={<Loader />}>
+        <OrbitControls
+          enableZoom={false}
+          mouseButtons={{
+            LEFT: MOUSE.ROTATE,
+            MIDDLE: MOUSE.DOLLY,
+            RIGHT: MOUSE.NONE,
+          }}
+        />
         <Ball imgUrl={icon} />
       </Suspense>
 
       <Preload all />
     </Canvas>
   );
-};
+}
 
 export default BallCanvas;
