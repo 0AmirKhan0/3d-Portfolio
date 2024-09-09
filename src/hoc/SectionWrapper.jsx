@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { staggerContainer } from "../utils/motion";
 
-const StarWrapper = (Component, idName) =>
-  function HOC() {
+function SectionWrapper(idName, Component) {
+  return function HOC() {
     return (
       <motion.section
         variants={staggerContainer()}
@@ -21,5 +21,6 @@ const StarWrapper = (Component, idName) =>
       </motion.section>
     );
   };
+}
 
-export default StarWrapper;
+export default SectionWrapper;
