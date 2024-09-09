@@ -1,6 +1,5 @@
 import {
   mobile,
-  backend,
   creator,
   web,
   javascript,
@@ -8,6 +7,7 @@ import {
   html,
   css,
   reactjs,
+  // nextjs,
   redux,
   tailwind,
   nodejs,
@@ -23,6 +23,7 @@ import {
   jobit,
   tripguide,
   threejs,
+  backend,
 } from "../assets";
 
 export const navLinks = [
@@ -46,15 +47,15 @@ const services = [
     icon: web,
   },
   {
-    title: "React Native Developer",
+    title: "React Developer",
     icon: mobile,
   },
   {
-    title: "Backend Developer",
+    title: "Next.js Developer",
     icon: backend,
   },
   {
-    title: "Content Creator",
+    title: "Designer",
     icon: creator,
   },
 ];
