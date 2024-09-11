@@ -15,12 +15,15 @@ import {
   starbucks,
   tesla,
   shopify,
-  carrent,
-  jobit,
-  tripguide,
+  wo,
+  ww,
+  wow,
   threejs,
   backend,
   github,
+  LSK,
+  SM,
+  SK,
 } from "../assets";
 
 export const navLinks = [
@@ -168,77 +171,74 @@ const experiences = [
 const testimonials = [
   {
     testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
+      "I thought it was impossible to make a website as beautiful as our product, but AmirKhan proved me wrong.",
     name: "Sara Lee",
     designation: "CFO",
     company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
+    image: "LSK",
   },
   {
     testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
+      "I've never met a web developer who truly cares about their clients' success like AMirKhan does.",
     name: "Chris Brown",
     designation: "COO",
     company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
+    image: "SM",
   },
   {
     testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
+      "After AMirKhan optimized our website, our traffic increased by 50%. We can't thank them enough!",
     name: "Lisa Wang",
     designation: "CTO",
     company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
+    image: "SK",
   },
 ];
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "World Wise",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "A map-based app for marking locations and adding notes, ideal for planning, documenting, and revisiting places of interest.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+
+      {
+        name: "css-modules",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: ww,
+    source_code_link: "https://github.com/0AmirKhan0/World-Wise",
+  },
+  {
+    name: "Wild Oasis",
+    description:
+      "A hotel management system for a jungle resort, allowing users to book cabins and configure settings for the Wild Oasis website.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "supabase",
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "styled-components",
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/",
+    image: wo,
+    source_code_link: "https://github.com/0AmirKhan0/the-wild-oasis",
   },
   {
-    name: "Job IT",
+    name: "Wild Oasis Website",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "restapi",
-        color: "green-text-gradient",
-      },
-      {
-        name: "scss",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: jobit,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Trip Guide",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "A user-friendly website for a jungle resort, enabling guests to log in, book cabins, and manage their reservations.",
     tags: [
       {
         name: "nextjs",
@@ -249,12 +249,12 @@ const projects = [
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "tailwind",
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+    image: wow,
+    source_code_link: "https://github.com/0AmirKhan0/the-wild-oasis-website",
   },
 ];
 
