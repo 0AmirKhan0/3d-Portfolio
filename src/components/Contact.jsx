@@ -10,7 +10,15 @@ function Contact() {
   const [loading, setLoading] = useState(false);
   const formRef = useRef();
 
-  function handleChange() {}
+  function handleChange(e) {
+    const { name, value } = e.target;
+
+    setForm({ ...form, [name]: value });
+  }
+
+  function handleClearInputs() {
+    setForm({ name: "", email: "", message: "" });
+  }
 
   return (
     <div className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden">
@@ -21,7 +29,11 @@ function Contact() {
         <p className={styles.sectionSubText}>Get in touch</p>
         <h3 className={styles.sectionHeadText}>Contact.</h3>
 
-        <form ref={formRef} className="mt-12 flex flex-col gap-8">
+        <form
+          onSubmit={(e) => e.preventDefault()}
+          ref={formRef}
+          className="mt-12 flex flex-col gap-8"
+        >
           <label className="flex flex-col">
             <span className="text-white font-medium mb-4">Your Name</span>
             <input
@@ -38,7 +50,7 @@ function Contact() {
             <span className="text-white font-medium mb-4">Your Email</span>
             <input
               type="email"
-              name="name"
+              name="email"
               value={form.email}
               onChange={handleChange}
               placeholder="What's your Email?"
@@ -58,12 +70,21 @@ function Contact() {
             />
           </label>
 
-          <button
-            type="submit"
-            className="bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl hover:shadow-sm hover:bg-tertiary/80"
-          >
-            {loading ? "Sending..." : "Send"}
-          </button>
+          <div className="flex items-center sm:justify-start justify-evenly gap-8">
+            <button
+              type="submit"
+              className="bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl hover:shadow-sm hover:bg-tertiary/80"
+            >
+              {loading ? "Sending..." : "Send"}
+            </button>
+            <button
+              type="reset"
+              className="bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl hover:shadow-sm hover:bg-tertiary/80"
+              onClick={handleClearInputs}
+            >
+              Clear
+            </button>
+          </div>
         </form>
       </motion.div>
 
