@@ -172,26 +172,26 @@ const testimonials = [
   {
     testimonial:
       "I thought it was impossible to make a website as beautiful as our product, but AmirKhan proved me wrong.",
-    name: "Sara Lee",
+    name: "Mohammad Lashkari",
     designation: "CFO",
     company: "Acme Co",
-    image: "LSK",
+    image: LSK,
   },
   {
     testimonial:
-      "I've never met a web developer who truly cares about their clients' success like AMirKhan does.",
-    name: "Chris Brown",
+      "I've never met a web developer who truly cares about their clients' success like AmirKhan does.",
+    name: "Salar Mehri Mahani",
     designation: "COO",
     company: "DEF Corp",
-    image: "SM",
+    image: SM,
   },
   {
     testimonial:
-      "After AMirKhan optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
+      "After AmirKhan optimized our website, our traffic increased by 50%. We can't thank them enough!",
+    name: "Salar Keshavarzi",
     designation: "CTO",
     company: "456 Enterprises",
-    image: "SK",
+    image: SK,
   },
 ];
 
