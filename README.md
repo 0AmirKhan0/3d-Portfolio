@@ -1,3 +1,12 @@
+
+<img src="/src/assets/readme.png" width="1000px" height="300px"/>
+
+<div align="center">
+  
+[![My Skills](https://skillicons.dev/icons?i=react,threejs,tailwind&perline=3)](https://skillicons.dev)
+  
+</div>
+
 # 3D Portfolio
 A modern 3D portfolio website built using **React**, **Three.js**, **Framer Motion**, and **React Three Fiber**. Showcasing my skills, projects, and experience with an interactive 3D design.
 
